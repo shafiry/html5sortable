@@ -24,14 +24,6 @@ bower install html.sortable —save
 npm install html.sortable —save
 ```
 
-# Examples
-
-* [Examples](http://htmlpreview.github.io/?https://github.com/voidberg/html5sortable/blob/master/examples/examples.html)
-* [AngularJS with a single list](http://htmlpreview.github.io/?https://github.com/voidberg/html5sortable/blob/master/examples/angular-single.html)
-* [AngularJS with connected lists](http://htmlpreview.github.io/?https://github.com/voidberg/html5sortable/blob/master/examples/angular-connected.html)
-* [AngularJS with connected lists and ngRepeat](http://htmlpreview.github.io/?https://github.com/voidberg/html5sortable/blob/master/examples/angular-ngRepeat-connected.html)
-
-
 # Build it / Hack it
 
 **1. Node package manager (npm)**  
@@ -332,18 +324,18 @@ If your code gets to complex, try to refactor parts out into individual function
 If you want to help us by working on any of the points below, please let me know and I add you and your branch to the list.
 
 - [ ] clean up & add comments
-- [ ] use bootstrap as css for example
-- [ ] Refactor & break code into functions
+- [ ] use basscss as css for example
+- [ ] update gh-pages
+- [ ] refactor & break code into functions
 - [ ] Nesting via drag & drop
 - [ ] mocha/chai/zombie tests
 - [ ] refactor to have gulp create
   - [ ] jQuery version
   - [ ] plain js version
 - [ ] make this compatible with
-  - [ ] plain js
-  - [ ] and
+  - [x] plain js
+  - [x] amd
   - [ ] commonjs
-  - [ ] es6 modules
 
 # License
 

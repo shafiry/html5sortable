@@ -347,6 +347,9 @@ var sortable = function(selector, options) {
       }
       dragging = null;
       draggingHeight = null;
+      originalIndex = null;
+      originalParent = null;
+      originalPrevious = null;
     });
     // Handle drop event on sortable & placeholder
     // TODO: REMOVE placeholder?????

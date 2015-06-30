@@ -17,7 +17,7 @@ var draggingHeight;
 var originalIndex;
 var originalParent;
 var originalPrevious;
-var moved = false;
+var moved;
 var placeholders = $();
 var sortables = [];
 /*
@@ -290,6 +290,7 @@ var sortable = function(selector, options) {
       originalIndex = dragging.index();
       originalParent = dragging.parent();
       originalPrevious = dragging.prev();
+      moved = false;
       index = dragging.index();
       draggingHeight = dragging.height();
       startParent = $(this).parent();
@@ -306,7 +307,7 @@ var sortable = function(selector, options) {
         return;
       }
       if (!moved) {
-        if (originalIndex != 0) {
+        if (originalIndex === 0) {
           originalParent.prepend(dragging);
         } else {
           dragging.insertAfter(originalPrevious);
@@ -337,6 +338,9 @@ var sortable = function(selector, options) {
       }
       dragging = null;
       draggingHeight = null;
+      originalIndex = null;
+      originalParent = null;
+      originalPrevious = null;
     });
     // Handle drop event on sortable & placeholder
     // TODO: REMOVE placeholder?????
@@ -382,7 +386,7 @@ var sortable = function(selector, options) {
           }
         }
 
-        if(dragging.is(':visible')){
+        if (dragging.is(':visible')) {
           dragging.hide();
           dragging.appendTo($(dragging).parent());
         }
